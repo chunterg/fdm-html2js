@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     grunt.registerMultiTask('html2js', 'Convert html to js string', function() {
         // Merge task-specific and/or target-specific options with these defaults.
         var options = this.options({
-            encoding: 'gbk',
+            encoding: 'utf8',
             compress:true
         });
         this.files.forEach(function(f) {
@@ -52,6 +52,7 @@ module.exports = function(grunt) {
                 // 文件内容
                 // filecontentTemp = filecontentTemp.replace(/\\/g, '\\\\').replace(/\'/g, '\\\'').replace(/\n\s*\n/g, '\n').replace(/\n/g, '').replace(/<!-(.*)->/g, '').replace(/\>(.*)\</g, '');
                 if(options.compress){
+
                     filecontentTemp = HtmlCompress.compress(filecontentTemp,{});
                     filecontentTemp = filecontentTemp.replace(/\\/g, '\\\\').replace(/\'/g, '\\\'').replace(/\n/g, ''); 
                 }else{

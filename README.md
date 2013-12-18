@@ -2,14 +2,14 @@
 
 > Convert html to javascript string
 
-##配置说明
+##插件配置说明
 
 ```js
 grunt.initConfig({
   html2js: {
     options: {
       encoding:"utf8", //文件编码，默认为utf8
-      compress:true   //是否压缩输出
+      compress:true   //是否压缩输出，默认为true
     },
     files: {
       'dest/': 'src/**/*.html',
@@ -17,6 +17,8 @@ grunt.initConfig({
   },
 })
 ```
+
+##HTML配置
 
 ```html
 输出的变量名，默认为源文件名，不支持中文
@@ -26,11 +28,17 @@ grunt.initConfig({
 <!--filename:after-->
 
 html code...
+
 ```
 
+###说明
+
+若输出js有异常，请检查文件编码
+
+---------------------------------------
 
 ## Getting Started
-This plugin requires Grunt ``
+This plugin requires Grunt 
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
 

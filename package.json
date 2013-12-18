@@ -1,7 +1,7 @@
 {
   "name": "fdm-html2js",
   "description": "Convert html to specified js string",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/chunterg/fdm-html2js",
   "author": {
     "name": "chunterg"
